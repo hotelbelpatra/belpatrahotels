@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://belpatrahotels.com/sitemap.xml
+
+# Block screenshots folder
+Disallow: /screenshots/

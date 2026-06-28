@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+Disallow: /screenshots/
+Disallow: /.image-slots.state.json
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /uploads/
+
+# Sitemap
+Sitemap: https://belpatrahotels.com/sitemap.xml
+
+# AI crawlers — allow indexing
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /

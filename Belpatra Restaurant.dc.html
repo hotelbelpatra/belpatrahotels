@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="icon" type="image/png" href="uploads/WhatsApp_Image_2026-06-23_at_09.54.25-removebg-preview.png">
+  <title>Pure Veg Restaurant Menu | Belpatra Orchha | Open 9AM–11PM</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pure Veg Restaurant Menu | Belpatra Orchha | Open 9AM–11PM">
+  <meta property="og:description" content="Belpatra's complete pure vegetarian menu — Tandoori Starters, Paneer Mains, South Indian, Desi Chinese, Continental, Thali, Sweets & Beverages. 100% sattvic. Op">
+  <meta property="og:image" content="https://belpatrahotels.com/uploads/belpatra-logo.png">
+  <meta property="og:url" content="https://belpatrahotels.com/menu">
+  <meta property="og:site_name" content="Belpatra Restaurant &amp; Hotel, Orchha">
+  <meta name="description" content="Belpatra's complete pure vegetarian menu — Tandoori Starters, Paneer Mains, South Indian, Desi Chinese, Continental, Thali, Sweets & Beverages. 100% sattvic. Open 9AM–11PM near Ram Raja Temple, Orchha.">
+  <meta name="keywords" content="pure veg restaurant Orchha, vegetarian menu Orchha, Belpatra restaurant menu, paneer dishes Orchha, veg thali Orchha, South Indian Orchha">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://belpatrahotels.com/menu">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Menu","name":"Belpatra Restaurant Menu","url":"https://belpatrahotels.com/menu","inLanguage":"en"}</script>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pure Veg Restaurant Menu | Belpatra Orchha | Open 9AM–11PM">
+  <meta name="twitter:description" content="Belpatra's complete pure vegetarian menu — Tandoori Starters, Paneer Mains, South Indian, Desi Chinese, Continental, Thali, Sweets & Beverages. 100% sattvic. Op">
+  <meta name="twitter:image" content="https://belpatrahotels.com/uploads/belpatra-logo.png">
+  <style>
+    :root{--bg-1:#0c1a11;--bg-2:#162a1c;--bg-3:#1d3525;--tx-1:#f2ead8;--tx-2:#c9b896;--tx-m:#8a7a60;--gr:#4fa870;--gd:#d4a843;--sf:#e07828;--bd:rgba(79,168,112,0.18);}
+    [data-theme="light"]{--bg-1:#f5f0e8;--bg-2:#ece5d7;--bg-3:#ffffff;--tx-1:#1a3020;--tx-2:#3d5c42;--tx-m:#6b7c62;--gr:#2d6a45;--gd:#b8902a;--sf:#c0621a;--bd:rgba(45,106,69,0.15);}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--bg-1);color:var(--tx-1);font-family:'Plus Jakarta Sans',sans-serif;}
+    a{color:inherit;text-decoration:none;}
+    h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;}
+
+    /* ── MENU ITEM CARD ── */
+    .mi{
+      background:var(--bg-3);
+      border-radius:10px;
+      padding:14px 16px 14px 18px;
+      border:1px solid var(--bd);
+      position:relative;
+      cursor:default;
+      transition:transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:8px;
+    }
+    .mi::before{
+      content:'';
+      position:absolute;
+      left:0;top:0;bottom:0;
+      width:3px;
+      border-radius:10px 0 0 10px;
+      background:var(--accent,var(--gr));
+      transition:width 0.22s ease;
+    }
+    .mi:hover{
+      transform:translateY(-3px) scale(1.015);
+      border-color:var(--accent,var(--gr));
+      box-shadow:0 6px 28px var(--glow,rgba(79,168,112,0.22));
+      background:var(--bg-hover,var(--bg-3));
+    }
+    .mi:hover::before{ width:5px; }
+    .mi-name{font-size:14px;font-weight:600;color:var(--tx-1);line-height:1.35;flex:1;}
+    .mi-sub{font-size:11.5px;color:var(--tx-m);margin-top:2px;font-weight:400;}
+    .mi-badge{
+      font-size:9px;font-weight:800;letter-spacing:0.1em;
+      padding:3px 8px;border-radius:40px;
+      white-space:nowrap;flex-shrink:0;
+    }
+    .badge-hot{background:rgba(224,120,40,0.15);color:var(--sf);border:1px solid rgba(224,120,40,0.3);}
+    .badge-pop{background:rgba(212,168,67,0.15);color:var(--gd);border:1px solid rgba(212,168,67,0.3);}
+    .badge-new{background:rgba(79,168,112,0.15);color:var(--gr);border:1px solid rgba(79,168,112,0.3);}
+
+    /* accent themes per section */
+    .sec-green .mi{--accent:var(--gr);--glow:rgba(79,168,112,0.2);}
+    .sec-gold  .mi{--accent:var(--gd);--glow:rgba(212,168,67,0.2);--bg-hover:var(--bg-3);}
+    .sec-fire  .mi{--accent:var(--sf);--glow:rgba(224,120,40,0.22);}
+    .sec-blue  .mi{--accent:#5ab4d4;--glow:rgba(90,180,212,0.18);}
+
+    /* section header pill */
+    .sec-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.04);border:1px solid var(--bd);border-radius:40px;padding:5px 16px;font-size:10px;font-weight:700;letter-spacing:0.25em;margin-bottom:10px;}
+
+    /* stagger reveal */
+    .mi{opacity:0;transform:translateY(18px);}
+    .mi.vis{opacity:1;transform:translateY(0);transition:opacity 0.45s ease, transform 0.45s ease, box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease;}
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>(function(){var t=localStorage.getItem('belpatraTheme')||'dark';document.documentElement.setAttribute('data-theme',t);})()</script>
+  <script src="./slot-persist.js"></script>
+  <script src="./image-slot.js"></script>
+  <style>#_navstub{position:fixed;top:0;left:0;right:0;height:71px;background:#0c1a11;border-bottom:1px solid rgba(79,168,112,0.18);z-index:1003;}[data-theme="light"] #_navstub{background:#f5f0e8;}</style>
+</helmet>
+
+<div id="_navstub"></div>
+<dc-import name="belpatra-nav" hint-size="100%,71px"></dc-import>
+
+<!-- HERO -->
+<section style="background-color:var(--bg-1);background-image:radial-gradient(circle at center,rgba(79,168,112,0.09) 1px,transparent 1px);background-size:28px 28px;padding:72px 40px 100px;text-align:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(224,120,40,0.06) 0%,transparent 60%);pointer-events:none;"></div>
+  <div style="position:relative;z-index:1;max-width:720px;margin:0 auto;">
+    <div style="color:var(--gd);font-size:10.5px;letter-spacing:0.3em;font-weight:700;margin-bottom:14px;">✦ PURE VEG SINCE DAY ONE ✦</div>
+    <h1 style="font-size:clamp(38px,6vw,64px);font-weight:300;color:var(--tx-1);margin-bottom:16px;">Our Menu</h1>
+    <p style="color:var(--tx-2);font-size:15px;line-height:1.75;margin-bottom:8px;">100% Pure Vegetarian · Open 9:00 AM – 11:00 PM · Breakfast, Lunch &amp; Dinner</p>
+    <p style="color:var(--tx-m);font-size:13px;">🙏 No onion-garlic on request &nbsp;·&nbsp; ☘️ Jain options available</p>
+    <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(224,120,40,0.12);border:1px solid rgba(224,120,40,0.35);padding:10px 22px;border-radius:8px;margin-top:16px;">
+      <span style="font-size:22px;">🛵</span>
+      <div style="text-align:left;">
+        <div style="font-size:13px;font-weight:700;color:var(--sf);">Home Delivery across Orchha!</div>
+        <div style="font-size:12px;color:var(--tx-m);">Call or WhatsApp your order: <a href="https://wa.me/918400598882?text=Hello%2C%20I%20would%20like%20to%20place%20a%20food%20delivery%20order" target="_blank" style="color:var(--gd);font-weight:700;" ondragover="event.preventDefault();event.stopPropagation();" ondrop="event.preventDefault();event.stopPropagation();">+91 84005 98882</a></div>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:0;left:0;right:0;overflow:hidden;line-height:0;">
+    <svg viewBox="0 0 1440 40" style="display:block;width:100%;height:40px;fill:var(--bg-2);" preserveAspectRatio="none"><path d="M0,40 L0,20 Q360,0 720,20 Q1080,40 1440,20 L1440,40 Z"/></svg>
+  </div>
+</section>
+
+<!-- TIMINGS -->
+<div class="bm-delivery" style="background:var(--bg-2);padding:20px 40px;border-bottom:1px solid var(--bd);">
+  <div style="max-width:1100px;margin:0 auto;display:flex;justify-content:space-around;flex-wrap:wrap;gap:16px;">
+    <div style="text-align:center;"><div style="font-size:18px;margin-bottom:4px;">🌅</div><div style="font-size:10px;color:var(--gd);font-weight:700;letter-spacing:0.15em;">BREAKFAST</div><div style="font-size:13px;color:var(--tx-1);font-weight:600;margin-top:3px;">9:00 AM – 11:30 AM</div></div>
+    <div style="width:1px;background:var(--bd);align-self:stretch;"></div>
+    <div style="text-align:center;"><div style="font-size:18px;margin-bottom:4px;">🌿</div><div style="font-size:10px;color:var(--gr);font-weight:700;letter-spacing:0.15em;">SOUTH INDIAN</div><div style="font-size:13px;color:var(--tx-1);font-weight:600;margin-top:3px;">8–11 AM &amp; 4–7 PM</div></div>
+    <div style="width:1px;background:var(--bd);align-self:stretch;"></div>
+    <div style="text-align:center;"><div style="font-size:18px;margin-bottom:4px;">☀️</div><div style="font-size:10px;color:var(--gd);font-weight:700;letter-spacing:0.15em;">LUNCH</div><div style="font-size:13px;color:var(--tx-1);font-weight:600;margin-top:3px;">12:00 PM – 3:30 PM</div></div>
+    <div style="width:1px;background:var(--bd);align-self:stretch;"></div>
+    <div style="text-align:center;"><div style="font-size:18px;margin-bottom:4px;">🌙</div><div style="font-size:10px;color:var(--gd);font-weight:700;letter-spacing:0.15em;">DINNER</div><div style="font-size:13px;color:var(--tx-1);font-weight:600;margin-top:3px;">7:00 PM – 10:30 PM</div></div>
+  </div>
+</div>
+
+<!-- ── COMBO MEALS ── -->
+<section style="background:var(--bg-1);padding:64px 40px 56px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <image-slot id="menu-combos" src="./uploads/Gemini_Generated_Image_eo8mjeeo8mjeeo8m.png" placeholder="📷 Combo Meals — Chole Bhature, Biryani" shape="rounded" radius="12" style="width:100%;height:280px;display:block;margin-bottom:36px;;pointer-events:auto;position:relative;z-index:1;"></image-slot>
+    <div style="text-align:center;margin-bottom:32px;">
+      <div class="sec-pill" style="color:var(--gr);">🍱 COMBO MEALS</div>
+      <h2 style="font-size:clamp(26px,3.5vw,40px);font-weight:300;color:var(--tx-1);">Meal Combos</h2>
+    </div>
+    <div class="sec-green" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;">
+      <div class="mi"><div><div class="mi-name">Chole Bhature</div><div class="mi-sub">2 Pcs</div></div><span class="mi-badge badge-pop">POPULAR</span></div>
+      <div class="mi"><div><div class="mi-name">Chole Chawal</div><div class="mi-sub">with salad &amp; pickle</div></div></div>
+      <div class="mi"><div><div class="mi-name">Rajma Chawal</div><div class="mi-sub">with salad &amp; pickle</div></div></div>
+      <div class="mi"><div><div class="mi-name">Butter Khichadi</div><div class="mi-sub">with curd &amp; pickle</div></div></div>
+      <div class="mi"><div><div class="mi-name">Veg Biryani</div><div class="mi-sub">with raita</div></div><span class="mi-badge badge-pop">POPULAR</span></div>
+      <div class="mi"><div><div class="mi-name">Hyderabadi Biryani</div><div class="mi-sub">with raita</div></div><span class="mi-badge badge-hot">MUST TRY</span></div>
+      <div class="mi"><div><div class="mi-name">Paneer Tandoori Kulcha</div><div class="mi-sub">2 Pcs · with chole &amp; pickle</div></div></div>
+      <div class="mi"><div><div class="mi-name">Aloo Tandoori Kulcha</div><div class="mi-sub">2 Pcs · with chole &amp; pickle</div></div></div>
+      <div class="mi"><div><div class="mi-name">Paneer Tandoori Paratha</div><div class="mi-sub">2 Pcs · with chole &amp; pickle</div></div></div>
+      <div class="mi"><div><div class="mi-name">Aloo Tandoori Paratha</div><div class="mi-sub">2 Pcs · with chole &amp; pickle</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── THALI ── -->
+<section style="background:var(--bg-2);padding:56px 40px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <image-slot id="menu-thali" src="./uploads/Gemini_Generated_Image_i6ynsdi6ynsdi6yn.png" placeholder="📷 Belpatra Maharaja Thali" shape="rounded" radius="12" style="width:100%;height:280px;display:block;margin-bottom:36px;;pointer-events:auto;position:relative;z-index:1;"></image-slot>
+    <div style="text-align:center;margin-bottom:32px;">
+      <div class="sec-pill" style="color:var(--gd);">👑 SIGNATURE</div>
+      <h2 style="font-size:clamp(26px,3.5vw,40px);font-weight:300;color:var(--tx-1);">Thali</h2>
+    </div>
+    <div style="max-width:600px;margin:0 auto;">
+      <div class="mi sec-gold" style="padding:20px 24px;border:2px solid rgba(212,168,67,0.4);border-radius:14px;">
+        <div>
+          <div class="mi-name" style="font-size:17px;">🍱 Belpatra Maharaja Thali</div>
+          <div class="mi-sub" style="margin-top:6px;line-height:1.7;">Baby Naan · Baby Lachha Paratha · Dal Makhani · Paneer Sabji · Mix Veg · Pulao · Raita · Salad · Papad · Pickle · Sweet · Butter Milk</div>
+        </div>
+        <span class="mi-badge badge-pop" style="font-size:10px;padding:5px 12px;">★ BESTSELLER</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOUPS ── -->
+<section style="background:var(--bg-1);padding:56px 40px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <image-slot id="menu-soups" src="./uploads/Gemini_Generated_Image_gys5vzgys5vzgys5.png" placeholder="📷 Soups — Tomato, Manchow, Sweet Corn" shape="rounded" radius="12" style="width:100%;height:240px;display:block;margin-bottom:36px;;pointer-events:auto;position:relative;z-index:1;"></image-slot>
+    <div style="text-align:center;margin-bottom:32px;">
+      <div class="sec-pill" style="color:var(--gr);">🍵 STARTERS</div>
+      <h2 style="font-size:clamp(26px,3.5vw,40px);font-weight:300;color:var(--tx-1);">Soups</h2>
+    </div>
+    <div class="sec-green" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;">
+      <div class="mi"><div class="mi-name">Cream of Tomato</div></div>
+      <div class="mi"><div class="mi-name">Hot &amp; Sour</div></div>
+      <div class="mi"><div class="mi-name">Lemon Coriander</div></div>
+      <div class="mi"><div class="mi-name">Veg Manchow</div></div>
+      <div class="mi"><div class="mi-name">Veg Clear Soup</div></div>
+      <div class="mi"><div class="mi-name">Sweet Corn</div><span class="mi-badge badge-pop">POPULAR</span></div>
+      <div class="mi"><div class="mi-name">Cream of Mushroom</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOUTH INDIAN ── -->
+<section style="background:var(--bg-2);padding:56px 40px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <image-slot id="menu-south-indian" src="./uploads/Gemini_Generated_Image_dieb0cdieb0cdieb.png" placeholder="📷 South Indian — Masala Dosa, Idli Sambar" shape="rounded" radius="12" style="width:100%;height:280px;display:block;margin-bottom:36px;;pointer-events:auto;position:relative;z-index:1;"></image-slot>
+    <div style="text-align:center;margin-bottom:10px;">
+      <div class="sec-pill" style="color:var(--gr);">🥞 SOUTH INDIAN</div>
+      <h2 style="font-size:clamp(26px,3.5vw,40px);font-weight:300;color:var(--tx-1);">South Indian</h2>
+      <p style="color:var(--tx-m);font-size:12.5px;margin-top:8px;">⏰ 8 AM – 11 AM &amp; 4 PM – 7 PM only</p>
+    </div>
+    <div class="sec-green" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-top:28px;">
+      <div class="mi"><div class="mi-name">Plain Dosa</div></div>
+      <div class="mi"><div class="mi-name">Masala Dosa</div><span class="mi-badge badge-pop">POPULAR</span></div>
+      <div class="mi"><div class="mi-name">Butter Masala Dosa</div></div>
+      <div class="mi"><div class="mi-name">Paneer Masala Dosa</div></div>
+      <div class="mi"><div><div class="mi-name">Uttapam</div><div class="mi-sub">Masala / Onion / Mix-veg</div></div></div>
+      <div class="mi"><div><div class="mi-name">Idli Sambar</div><div class="mi-sub">3 Pcs</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TANDOORI STARTERS ── -->
+<section style="background:var(--bg-1);padding:56px 40px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <image-slot id="menu-tandoori" src="./uploads/Gemini_Generated_Image_a2jarya2jarya2ja.png" placeholder="📷 Tandoori Starters — Paneer Tikka, Soya Chaap" shape="rounded" radius="12" style="width:100%;height:280px;display:block;margin-bottom:36px;;pointer-events:auto;position:relative;z-index:1;"></image-slot>
+    <div style="text-align:center;margin-bottom:32px;">
+      <div class="sec-pill" style="color:var(--sf);">🔥 FROM THE TANDOOR</div>
+      <h2 style="font-size:clamp(26px,3.5vw,40px);font-weight:300;color:var(--tx-1);">Tandoori Starters</h2>
+    </div>
+    <div class="sec-fire" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;">
+      <div class="mi"><div class="mi-name">Paneer Tikka</div><span class="mi-badge badge-pop">POPULAR</span></div>
+      <div class="mi"><div class="mi-name">Afghani Paneer Tikka</div></div>
+      <div class="mi"><div class="mi-name">Haryali Paneer Tikka</div></div>
+      <div class="mi"><div class="mi-name">Achari Paneer Tikka</div></div>
+      <div class="mi"><div class="mi-name">Tandoori Soya Chaap</div><span class="mi-badge badge-hot">MUST TRY</span></div>
+      <div class="mi"><div class="mi-name">Tandoori Malai Chaap</div></div>
+      <div class="mi"><div class="mi-name">Hara Bhara Kebab</div></div>
+      <div class="mi"><div class="mi-name">Dahi ke Sholey</div></div>
+      <div class="mi"><div class="mi-name">Dahi Kebab</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PANEER SPECIALTIES ── -->
+<section style="background:var(--bg-2);padding:56px 40px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <image-slot id="menu-paneer" src="./uploads/Gemini_Generated_Image_cry6sqcry6sqcry6.png" placeholder="📷 Paneer Specialties — Shahi Paneer, Kadhai Paneer" shape="rounded" radius="12" style="width:100%;height:280px;display:block;margin-bottom:36px;;pointer-events:auto;position:relative;z-index:1;"></image-slot>
+    <div style="text-align:center;margin-bottom:32px;">
+      <div class="sec-pill" style="color:var(--gd);">✦ BELPATRA MAINS</div>
+      <h2 style="font-size:clamp(26px,3.5vw,40px);font-weight:300;color:var(--tx-1);">Paneer Specialties</h2>
+    </div>
+    <div class="sec-gold" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;">
+      <div class="mi"><div class="mi-name">Kaju Curry</div></div>
+      <div class="mi"><div class="mi-name">Paneer Pasanda</div></div>
+      <div class="mi"><div class="mi-name">Paneer Rajwadi</div></div>
+      <div class="mi"><div><div class="mi-name">Shahi Paneer</div><div class="mi-sub">White / Yellow</div></div><span class="mi-badge badge-pop">POPULAR</span></div>
+      <div class="mi"><div class="mi-name">Paneer Butter Masala</div><span class="mi-badge badge-pop">POPULAR</span></div>
+      <div class="mi"><div class="mi-name">Paneer Lawabdar</div></div>
+      <div class="mi"><div class="mi-name">Paneer Do Pyaza</div></div>
+      <div class="mi"><div class="mi-name">Paneer Kalegi</div></div>
+      <div class="mi"><div class="mi-name">Paneer Jaipuri</div></div>
+      <div class="mi"><div class="mi-name">Paneer Punjabi</div></div>
+      <div class="mi"><div class="mi-name">Paneer Tikka Masala</div></div>
+      <div class="mi"><div class="mi-name">Paneer Bhurji</div></div>
+      <div class="mi"><div class="mi-name">Masala Chapp Gravy</div><span class="mi-badge badge-hot">MUST TRY</span></div>
+      <div class="mi"><div class="mi-name">Malai Chapp Gravy</div></div>
+      <div class="mi"><div class="mi-name">Malai Kofta</div><span class="mi-badge badge-pop">POPULAR</span></div>
+      <div class="mi"><div class="mi-name">Kadhai Paneer</div></div>
+      <div class="mi"><div class="mi-name">Matar Paneer</div></div>
+      <div class="mi"><div class="mi-name">Palak Paneer</div></div>
+      <div class="mi"><div><div class="mi-name">Mushroom Masala</div><div class="mi-sub">Masala / Matar</div></div></div>
+      <div class="mi"><div><div class="mi-name">Mushroom Kadhai</div><div class="mi-sub">Kadhai / Do Pyaza</div></div></div>
+      <div class="mi"><div><div class="mi-name">Dum Aloo</div><div class="mi-sub">Punjabi / Kashmiri</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VEG MAINS + DAL + DESI SWAD ── -->
+<section style="background:var(--bg-1);padding:56px 40px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <image-slot id="menu-veg-mains" src="./uploads/Gemini_Generated_Image_e0y1yqe0y1yqe0y1.png" placeholder="📷 Vegetable Mains — Dal Makhani, Mix Veg" shape="rounded" radius="12" style="width:100%;height:280px;display:block;margin-bottom:36px;;pointer-events:auto;position:relative;z-index:1;"></image-slot>
+    <div style="text-align:center;margin-bottom:36px;">
+      <div class="sec-pill" style="color:var(--gr);">🌿 MAINS</div>
+      <h2 style="font-size:clamp(26px,3.5vw,40px);font-weight:300;color:var(--tx-1);">Vegetable Mains</h2>
+    </div>
+    <div class="bm-3c" style="display:grid;grid-template-columns:repeat(3,1fr);gap:36px;align-items:start;">
+      <div>
+        <div style="font-size:11px;font-weight:700;color:var(--gr);letter-spacing:0.18em;margin-bottom:14px;border-bottom:1px solid var(--bd);padding-bottom:8px;">VEGETABLE MAINS</div>
+        <div class="sec-green" style="display:flex;flex-direction:column;gap:8px;">
+          <div class="mi"><div class="mi-name">Palak Corn</div></div>
+          <div class="mi"><div class="mi-name">Veg Kofta</div></div>
+          <div class="mi"><div class="mi-name">Veg Kolhapuri</div></div>
+          <div class="mi"><div class="mi-name">Navratan Korma</div></div>
+          <div class="mi"><div class="mi-name">Methi Matar Malai</div></div>
+          <div class="mi"><div class="mi-name">Mix Veg</div></div>
+          <div class="mi"><div><div class="mi-name">Aloo Gobhi</div><div class="mi-sub">/ Aloo Matar</div></div></div>
+          <div class="mi"><div class="mi-name">Aloo Jeera</div></div>
+          <div class="mi"><div class="mi-name">Chana Masala</div></div>
+          <div class="mi"><div class="mi-name">Rajma Masala</div></div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;color:var(--gr);letter-spacing:0.18em;margin-bottom:14px;border-bottom:1px solid var(--bd);padding-bottom:8px;">DAL</div>
+        <div class="sec-green" style="display:flex;flex-direction:column;gap:8px;">
+          <div class="mi"><div class="mi-name">Dal Makhani</div><span class="mi-badge badge-pop">POPULAR</span></div>
+          <div class="mi"><div class="mi-name">Dal Handi</div></div>
+          <div class="mi"><div class="mi-name">Dal Tadka</div></div>
+          <div class="mi"><div class="mi-name">Dal Fry</div></div>
+        </div>
+        <div style="font-size:11px;font-weight:700;color:var(--gr);letter-spacing:0.18em;margin:22px 0 14px;border-bottom:1px solid var(--bd);padding-bottom:8px;">RAITA</div>
+        <div class="sec-green" style="display:flex;flex-direction:column;gap:8px;">
+          <div class="mi"><div class="mi-name">Boondi Raita</div></div>
+          <div class="mi"><div class="mi-name">Veg Raita</div></div>
+          <div class="mi"><div class="mi-name">Aloo Mint Raita</div></div>
+          <div class="mi"><div class="mi-name">Mint Cucumber Raita</div></div>
+          <div class="mi"><div class="mi-name">Fruit Raita</div></div>
+          <div class="mi"><div class="mi-name">Pineapple Raita</div></div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;color:var(--gr);letter-spacing:0.18em;margin-bottom:14px;border-bottom:1px solid var(--bd);padding-bottom:8px;">DESI SWAD</div>
+        <div class="sec-green" style="display:flex;flex-direction:column;gap:8px;">
+          <div class="mi"><div class="mi-name">Sev Bhaji</div></div>
+          <div class="mi"><div class="mi-name">Sev Tamatar</div></div>
+          <div class="mi"><div><div class="mi-name">Aloo Palak</div><div class="mi-sub">/ Aloo Methi</div></div></div>
+          <div class="mi"><div class="mi-name">Bhindi Masala</div></div>
+          <div class="mi"><div class="mi-name">Bhindi Do Pyaza</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DESI CHINESE ── -->
+<section style="background:var(--bg-2);padding:56px 40px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <image-slot id="menu-chinese" src="./uploads/5ddbf385-fa02-43d0-b767-b58963bfeb3c.jpg" placeholder="📷 Desi Chinese — Manchurian, Noodles, Chilli Paneer" shape="rounded" radius="12" style="width:100%;height:280px;display:block;margin-bottom:36px;;pointer-events:auto;position:relative;z-index:1;"></image-slot>
+    <div style="text-align:center;margin-bottom:36px;">
+      <div class="sec-pill" style="color:var(--sf);">🥢 DESI CHINESE</div>
+      <h2 style="font-size:clamp(26px,3.5vw,40px);font-weight:300;color:var(--tx-1);">Chinese Starters</h2>
+    </div>
+    <div class="sec-fire" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-bottom:40px;">
+      <div class="mi"><div><div class="mi-name">Chilli Potato</div><div class="mi-sub">/ Honey Chilli Potato</div></div><span class="mi-badge badge-pop">POPULAR</span></div>
+      <div class="mi"><div class="mi-name">Crispy Corn</div></div>
+      <div class="mi"><div><div class="mi-name">Veg Manchurian</div><div class="mi-sub">Dry / Gravy</div></div></div>
+      <div class="mi"><div><div class="mi-name">Gobhi Manchurian</div><div class="mi-sub">Dry / Gravy</div></div></div>
+      <div class="mi"><div><div class="mi-name">Chilli Paneer</div><div class="mi-sub">Dry / Gravy</div></div><span class="mi-badge badge-pop">POPULAR</span></div>
+      <div class="mi"><div><div class="mi-name">Chilli Mushroom</div><div class="mi-sub">Dry / Gravy</div></div></div>
+      <div class="mi"><div class="mi-name">Spring Roll</div></div>
+      <div class="mi"><div class="mi-name">Chilli Baby Corn</div></div>
+      <div class="mi"><div class="mi-name">Paneer 65</div><span class="mi-badge badge-hot">MUST TRY</span></div>
+      <div class="mi"><div class="mi-name">Cheese Chilli Onion Roll</div></div>
+    </div>
+    <div style="text-align:center;margin-bottom:24px;"><h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:300;color:var(--tx-1);">Noodles &amp; Rice</h3></div>
+    <div class="sec-fire" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;">
+      <div class="mi"><div class="mi-name">Veg Chowmein</div></div>
+      <div class="mi"><div class="mi-name">Hakka Noodles</div></div>
+      <div class="mi"><div class="mi-name">Schezwan Noodles</div><span class="mi-badge badge-hot">SPICY</span></div>
+      <div class="mi"><div class="mi-name">Singapuri Noodles</div></div>
+      <div class="mi"><div class="mi-name">Chilli Garlic Noodles</div></div>
+      <div class="mi"><div class="mi-name">Fried Rice</div></div>
+      <div class="mi"><div class="mi-name">Chilli Garlic Rice</div></div>
+      <div class="mi"><div class="mi-name">Schezwan Rice</div><span class="mi-badge badge-hot">SPICY</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTINENTAL ── -->
+<section style="background:var(--bg-1);padding:56px 40px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <image-slot id="menu-continental" src="./uploads/Gemini_Generated_Image_6g7alc6g7alc6g7a.png" placeholder="📷 Continental — French Fries, Pasta, Burger" shape="rounded" radius="12" style="width:100%;height:280px;display:block;margin-bottom:36px;;pointer-events:auto;position:relative;z-index:1;"></image-slot>
+    <div style="text-align:center;margin-bottom:32px;">
+      <div class="sec-pill" style="color:var(--blue,#5ab4d4);">🍝 CONTINENTAL</div>
+      <h2 style="font-size:clamp(26px,3.5vw,40px);font-weight:300;color:var(--tx-1);">Continental</h2>
+    </div>
+    <div class="sec-blue" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;">
+      <div class="mi"><div class="mi-name">French Fries</div><span class="mi-badge badge-pop">POPULAR</span></div>
+      <div class="mi"><div class="mi-name">Peri Peri Fries</div></div>
+      <div class="mi"><div><div class="mi-name">Veg Cheese Burger</div><div class="mi-sub">with Chips</div></div></div>
+      <div class="mi"><div><div class="mi-name">Veg Sandwich</div><div class="mi-sub">with Chips</div></div></div>
+      <div class="mi"><div class="mi-name">Veg Cheese Sandwich</div></div>
+      <div class="mi"><div><div class="mi-name">Pakoda</div><div class="mi-sub">Veg / Paneer</div></div></div>
+      <div class="mi"><div class="mi-name">Creamy Alfredo Pasta</div></div>
+      <div class="mi"><div class="mi-name">Italian Arrabbiata Pasta</div></div>
+      <div class="mi"><div class="mi-name">Paneer Sauté Veg</div></div>
+      <div class="mi"><div class="mi-name">Butter Corn</div></div>
+      <div class="mi"><div class="mi-name">Peanut Masala</div></div>
+      <div class="mi"><div><div class="mi-name">Cheese Balls</div><div class="mi-sub">8 Pcs</div></div></div>
+      <div class="mi"><div><div class="mi-name">Cheese Peanut Roll</div><div class="mi-sub">8 Pcs</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BREADS + SALADS + RICE ── -->
+<section style="background:var(--bg-2);padding:56px 40px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <image-slot id="menu-breads" src="./uploads/Gemini_Generated_Image_ws6lv8ws6lv8ws6l.png" placeholder="📷 Breads — Naan, Lachha Paratha, Tandoori Kulcha" shape="rounded" radius="12" style="width:100%;height:240px;display:block;margin-bottom:36px;;pointer-events:auto;position:relative;z-index:1;"></image-slot>
+    <div class="bm-3c" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;align-items:start;">
+      <div>
+        <div style="text-align:center;margin-bottom:20px;">
+          <div class="sec-pill" style="color:var(--gd);">🫓 BREADS</div>
+          <h3 style="font-size:24px;font-weight:300;color:var(--tx-1);">Breads</h3>
+        </div>
+        <div class="sec-gold" style="display:flex;flex-direction:column;gap:8px;">
+          <div class="mi"><div class="mi-name">Plain Roti</div></div>
+          <div class="mi"><div class="mi-name">Butter Roti</div></div>
+          <div class="mi"><div class="mi-name">Missi Roti</div></div>
+          <div class="mi"><div class="mi-name">Lachha Paratha</div><span class="mi-badge badge-pop">POPULAR</span></div>
+          <div class="mi"><div class="mi-name">Butter Naan</div></div>
+          <div class="mi"><div class="mi-name">Garlic Naan</div><span class="mi-badge badge-pop">POPULAR</span></div>
+          <div class="mi"><div class="mi-name">Paneer Tandoori Kulcha</div></div>
+          <div class="mi"><div class="mi-name">Aloo Tandoori Kulcha</div></div>
+          <div class="mi"><div class="mi-name">Paneer Tandoori Paratha</div></div>
+          <div class="mi"><div class="mi-name">Aloo Tandoori Paratha</div></div>
+          <div class="mi" style="border-color:rgba(212,168,67,0.4);"><div><div class="mi-name">Bread Basket</div><div class="mi-sub">Butter Roti · Missi Roti · Butter Naan · Lachha Paratha</div></div></div>
+        </div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:20px;">
+          <div class="sec-pill" style="color:var(--gr);">🥗 SALAD &amp; PAPAD</div>
+          <h3 style="font-size:24px;font-weight:300;color:var(--tx-1);">Salads &amp; Papad</h3>
+        </div>
+        <div class="sec-green" style="display:flex;flex-direction:column;gap:8px;">
+          <div class="mi"><div class="mi-name">Green Salad</div></div>
+          <div class="mi"><div class="mi-name">Kachumber Salad</div></div>
+          <div class="mi"><div class="mi-name">Russian Salad</div></div>
+          <div class="mi"><div class="mi-name">Onion Salad</div></div>
+          <div class="mi"><div class="mi-name">Papad Roasted</div></div>
+          <div class="mi"><div class="mi-name">Papad Fry</div></div>
+          <div class="mi"><div class="mi-name">Papad Masala</div></div>
+        </div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:20px;">
+          <div class="sec-pill" style="color:var(--gr);">🍚 RICE</div>
+          <h3 style="font-size:24px;font-weight:300;color:var(--tx-1);">Rice</h3>
+        </div>
+        <div class="sec-green" style="display:flex;flex-direction:column;gap:8px;">
+          <div class="mi"><div class="mi-name">Kashmiri Pulao</div></div>
+          <div class="mi"><div class="mi-name">Veg Pulao</div></div>
+          <div class="mi"><div class="mi-name">Navratan Pulao</div></div>
+          <div class="mi"><div class="mi-name">Matar Pulao</div></div>
+          <div class="mi"><div class="mi-name">Jeera Rice</div></div>
+          <div class="mi"><div class="mi-name">Plain Rice</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SWEETS ── -->
+<section style="background:var(--bg-1);padding:56px 40px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <image-slot id="menu-sweets" src="./uploads/Gemini_Generated_Image_u3u1b7u3u1b7u3u1.png" placeholder="📷 Sweets — Gulab Jamun, Choco Brownie, Ice Cream" shape="rounded" radius="12" style="width:100%;height:240px;display:block;margin-bottom:36px;;pointer-events:auto;position:relative;z-index:1;"></image-slot>
+    <div style="text-align:center;margin-bottom:32px;">
+      <div class="sec-pill" style="color:var(--sf);">🍮 DESSERTS</div>
+      <h2 style="font-size:clamp(26px,3.5vw,40px);font-weight:300;color:var(--tx-1);">Sweets</h2>
+    </div>
+    <div class="sec-fire" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;">
+      <div class="mi"><div><div class="mi-name">Gulab Jamun</div><div class="mi-sub">2 Pcs</div></div><span class="mi-badge badge-pop">POPULAR</span></div>
+      <div class="mi"><div><div class="mi-name">Ice Cream</div><div class="mi-sub">1 Scoop</div></div></div>
+      <div class="mi"><div class="mi-name">Thandai Kheer</div><span class="mi-badge badge-new">SPECIAL</span></div>
+      <div class="mi"><div class="mi-name">Choco Brownie w/ Ice Cream</div><span class="mi-badge badge-hot">MUST TRY</span></div>
+      <div class="mi"><div class="mi-name">Fruit Bonanza Sundae</div></div>
+      <div class="mi"><div class="mi-name">Chocolate Sundae</div></div>
+      <div class="mi"><div><div class="mi-name">Gajar ka Halwa</div><div class="mi-sub">Seasonal</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BEVERAGES ── -->
+<section style="background:var(--bg-2);padding:56px 40px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <image-slot id="menu-beverages" src="./uploads/Gemini_Generated_Image_8tydwh8tydwh8tyd.jpg" placeholder="📷 Beverages — Lassi, Cold Coffee, Shakes, Chai" shape="rounded" radius="12" style="width:100%;height:240px;display:block;margin-bottom:36px;;pointer-events:auto;position:relative;z-index:1;"></image-slot>
+    <div style="text-align:center;margin-bottom:32px;">
+      <div class="sec-pill" style="color:var(--gr);">🥤 DRINKS</div>
+      <h2 style="font-size:clamp(26px,3.5vw,40px);font-weight:300;color:var(--tx-1);">Beverages</h2>
+    </div>
+    <div class="sec-green" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;">
+      <div class="mi"><div><div class="mi-name">Hot Tea</div><div class="mi-sub">Milk / Green / Black</div></div></div>
+      <div class="mi"><div class="mi-name">Hot Coffee</div></div>
+      <div class="mi"><div><div class="mi-name">Special Hot Coffee</div><div class="mi-sub">Chocolate / Caramel / Hazelnut</div></div><span class="mi-badge badge-new">SPECIAL</span></div>
+      <div class="mi"><div class="mi-name">Butter Milk (Chaanch)</div></div>
+      <div class="mi"><div class="mi-name">Masala Lemonade</div></div>
+      <div class="mi"><div class="mi-name">Fresh Lime Soda</div></div>
+      <div class="mi"><div class="mi-name">Virgin Mint Mojito</div><span class="mi-badge badge-pop">POPULAR</span></div>
+      <div class="mi"><div class="mi-name">Dry Fruit Lassi</div><span class="mi-badge badge-hot">MUST TRY</span></div>
+      <div class="mi"><div class="mi-name">Cold Coffee with Ice Cream</div><span class="mi-badge badge-pop">POPULAR</span></div>
+      <div class="mi"><div class="mi-name">Oreo Shake</div></div>
+      <div class="mi"><div class="mi-name">Kitkat Shake</div></div>
+      <div class="mi"><div><div class="mi-name">Classic Shakes</div><div class="mi-sub">Chocolate / Vanilla / Strawberry</div></div></div>
+      <div class="mi"><div><div class="mi-name">Classic Shakes</div><div class="mi-sub">Mango / Pineapple / Blueberry</div></div></div>
+      <div class="mi"><div class="mi-name">Soft Drinks / Mineral Water</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PURE VEG PROMISE -->
+<section style="background:var(--bg-1);padding:56px 40px;text-align:center;">
+  <div style="max-width:640px;margin:0 auto;background:var(--bg-3);border-radius:16px;padding:40px;border:1px solid rgba(79,168,112,0.25);">
+    <div style="font-size:32px;margin-bottom:12px;">🌿</div>
+    <h2 style="font-size:clamp(22px,3.5vw,32px);font-weight:300;color:var(--tx-1);margin-bottom:14px;">Our Pure Veg Promise</h2>
+    <p style="color:var(--tx-2);font-size:14px;line-height:1.85;margin-bottom:18px;">No meat, no fish, no eggs — ever. Everything on this menu is 100% pure vegetarian, cooked fresh daily. Sattvic food without onion &amp; garlic is available on request. Jain options available.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+      <span style="background:rgba(79,168,112,0.1);border:1px solid rgba(79,168,112,0.3);padding:6px 14px;border-radius:40px;font-size:11px;font-weight:700;color:var(--gr);">🌿 100% PURE VEGETARIAN</span>
+      <span style="background:rgba(212,168,67,0.1);border:1px solid rgba(212,168,67,0.3);padding:6px 14px;border-radius:40px;font-size:11px;font-weight:700;color:var(--gd);">🙏 NO ONION-GARLIC ON REQUEST</span>
+      <span style="background:rgba(224,120,40,0.1);border:1px solid rgba(224,120,40,0.25);padding:6px 14px;border-radius:40px;font-size:11px;font-weight:700;color:var(--sf);">☘️ JAIN OPTIONS AVAILABLE</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--bg-2);padding:52px 40px;text-align:center;">
+  <h2 style="font-size:clamp(24px,3.5vw,36px);font-weight:300;color:var(--tx-1);margin-bottom:12px;">Visit Us, Order Online or Enquire</h2>
+  <p style="color:var(--tx-2);font-size:14px;margin-bottom:6px;">Main Road, Near Ram Raja Temple, Orchha · Open 9 AM – 11 PM daily</p>
+  <p style="color:var(--sf);font-size:13.5px;font-weight:600;margin-bottom:22px;">🛵 We deliver food across Orchha — call or WhatsApp to order: <a href="https://wa.me/918400598882?text=Hello%2C%20I%20would%20like%20to%20place%20a%20food%20delivery%20order" target="_blank" style="color:var(--gd);" ondragover="event.preventDefault();event.stopPropagation();" ondrop="event.preventDefault();event.stopPropagation();">+91 84005 98882</a></p>
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+    <a href="https://wa.me/918400598882?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20dining%20at%20Belpatra%2C%20Orchha" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#fff;padding:12px 24px;border-radius:6px;font-size:13.5px;font-weight:700;" ondragover="event.preventDefault();event.stopPropagation();" ondrop="event.preventDefault();event.stopPropagation();">💬 WhatsApp Us</a>
+    <a href="https://maps.app.goo.gl/9mHFjDt9NiR8SZkm8" target="_blank" style="display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gr);color:var(--gr);padding:12px 24px;border-radius:6px;font-size:13.5px;font-weight:700;" ondragover="event.preventDefault();event.stopPropagation();" ondrop="event.preventDefault();event.stopPropagation();">🗺️ Get Directions</a>
+  </div>
+</section>
+
+<p style="text-align:center;font-size:11px;color:var(--tx-m);opacity:0.45;padding:12px 40px 0;letter-spacing:0.04em;">* Food images are for representational purposes only. Actual presentation may vary.</p>
+<dc-import name="belpatra-footer" hint-size="100%,400px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    // Staggered reveal with IntersectionObserver
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const items = e.target.querySelectorAll('.mi:not(.vis)');
+          items.forEach((el, i) => {
+            setTimeout(() => el.classList.add('vis'), i * 45);
+          });
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.06 });
+    document.querySelectorAll('section').forEach(s => obs.observe(s));
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

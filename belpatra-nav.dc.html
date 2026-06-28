@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <script>(function(){var t=localStorage.getItem('belpatraTheme')||'dark';document.documentElement.setAttribute('data-theme',t);})()</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg-1:#0c1a11;--bg-2:#162a1c;--bg-3:#1d3525;--tx-1:#f2ead8;--tx-2:#c9b896;--tx-m:#8a7a60;--gr:#4fa870;--gd:#d4a843;--sf:#e07828;--bd:rgba(79,168,112,0.18);--sh:rgba(0,0,0,0.4);}
+    [data-theme="light"]{--bg-1:#f5f0e8;--bg-2:#ece5d7;--bg-3:#ffffff;--tx-1:#1a3020;--tx-2:#3d5c42;--tx-m:#6b7c62;--gr:#2d6a45;--gd:#b8902a;--sf:#c0621a;--bd:rgba(45,106,69,0.15);--sh:rgba(0,0,0,0.12);}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--bg-1);color:var(--tx-1);font-family:'Plus Jakarta Sans',sans-serif;min-height:100vh;}
+    a{color:inherit;text-decoration:none;}
+    ul,li{list-style:none;}
+    h1,h2,h3,h4,h5{font-family:'Cormorant Garamond',serif;font-weight:400;}
+    img{max-width:100%;display:block;}
+    button{font-family:'Plus Jakarta Sans',sans-serif;}
+    #belNav{position:fixed;top:0;left:0;right:0;z-index:1004;height:68px;display:flex;align-items:center;padding:0 36px;gap:20px;border-bottom:1px solid var(--bd);background:var(--bg-1);transition:background 0.3s,box-shadow 0.3s,transform 0.35s;}
+    #belNav.scrolled{background:rgba(12,26,17,0.93)!important;backdrop-filter:blur(18px);box-shadow:0 4px 28px var(--sh);}
+    [data-theme="light"] #belNav.scrolled{background:rgba(245,240,232,0.96)!important;}
+    #belNav.hidden{transform:translateY(-102%)!important;}
+    .bnl{font-size:12.5px;font-weight:500;color:var(--tx-2);letter-spacing:0.04em;padding:4px 0;border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s;}
+    .bnl:hover,.bnl.active{color:var(--gd);border-bottom-color:var(--gd);}
+    @media(max-width:960px){.beld{display:none!important;}.belm{display:flex!important;}}
+    @media(min-width:961px){.belm{display:none!important;}}
+    @keyframes waPulse{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,0.5);}70%{box-shadow:0 0 0 14px rgba(37,211,102,0);}}
+    #belProgress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--gr),var(--gd),var(--sf));z-index:1005;width:0;transition:width 0.08s linear;pointer-events:none;}
+  /* ── GLOBAL MOBILE RESPONSIVE (injected to every page via nav) ── */
+  @media(max-width:768px){
+    section{padding-left:16px!important;padding-right:16px!important;}
+    .bm-2c{grid-template-columns:1fr!important;gap:24px!important;}
+    .bm-3c{grid-template-columns:1fr!important;gap:16px!important;}
+    .bm-4c{grid-template-columns:repeat(2,1fr)!important;gap:10px!important;}
+    .bm-fcol{grid-template-columns:1fr!important;gap:6px!important;}
+    .bm-gall{grid-template-columns:1fr!important;grid-template-rows:auto!important;}
+    .bm-gall image-slot{height:200px!important;}
+    .bm-div{display:none!important;}
+    .bm-stack{flex-direction:column!important;align-items:flex-start!important;}
+    image-slot[style*="height:360"]{height:220px!important;}
+    image-slot[style*="height:400"]{height:220px!important;}
+    image-slot[style*="height:300"]{height:200px!important;}
+    image-slot[style*="height:280"]{height:200px!important;}
+    image-slot[style*="height:170"]{height:130px!important;}
+    image-slot[style*="height:160"]{height:130px!important;}
+    .bm-hero-btns{flex-direction:column!important;gap:12px!important;align-items:center!important;}
+    .bm-hero-btns a,.bm-hero-btns button{width:100%!important;justify-content:center!important;}
+    .bm-stats{grid-template-columns:1fr 1fr!important;} /* intentional 2-col on mobile */
+    /* Footer mobile */
+    .bm-footer{grid-template-columns:1fr 1fr!important;gap:24px!important;padding:40px 16px 28px!important;}
+    .bm-footer > div:first-child{grid-column:1 / -1!important;}
+    .bm-footer > div:last-child{grid-column:1 / -1!important;}
+    .bm-copyright{flex-direction:column!important;align-items:flex-start!important;gap:6px!important;padding-left:16px!important;padding-right:16px!important;}
+    .bm-delivery{padding-left:16px!important;padding-right:16px!important;}
+  }
+  </style>
+</helmet>
+
+<div id="belProgress"></div>
+
+<nav id="belNav">
+  <a href="Belpatra Home.dc.html" style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
+    <img src="uploads/WhatsApp_Image_2026-06-23_at_09.54.25-removebg-preview.png" alt="Belpatra" style="height:44px;width:auto;filter:drop-shadow(0 0 8px rgba(79,168,112,0.5));">
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--tx-1);letter-spacing:0.12em;line-height:1.1;">BELPATRA</div>
+      <div style="font-size:8.5px;color:var(--gr);letter-spacing:0.22em;font-weight:600;">ORCHHA · PURE VEG</div>
+    </div>
+  </a>
+  <div style="flex:1;"></div>
+  <div class="beld" style="display:flex;align-items:center;gap:24px;">
+    <a href="Belpatra Home.dc.html" class="bnl">Home</a>
+    <a href="Belpatra About.dc.html" class="bnl">About</a>
+    <a href="Belpatra Rooms.dc.html" class="bnl">Rooms</a>
+    <a href="Belpatra Restaurant.dc.html" class="bnl">Dine</a>
+    <a href="Belpatra Heritage.dc.html" class="bnl">Heritage</a>
+    <a href="Belpatra Gallery.dc.html" class="bnl">Gallery</a>
+    <a href="Belpatra Blog.dc.html" class="bnl">Blog</a>
+    <a href="Belpatra Contact.dc.html" class="bnl">Contact</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;">
+    <button onClick="{{ toggleTheme }}" title="Toggle theme" style="width:36px;height:36px;border-radius:50%;border:1px solid var(--bd);background:var(--bg-2);color:var(--tx-1);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;">{{ themeIcon }}</button>
+    <a class="beld" href="https://wa.me/918400598882?text=Hello%2C%20I%20would%20like%20to%20make%20a%20booking%20at%20Belpatra%2C%20Orchha" target="_blank" style="display:inline-flex;align-items:center;gap:5px;background:var(--gd);color:#1a1000;padding:8px 16px;border-radius:4px;font-size:12px;font-weight:700;letter-spacing:0.06em;white-space:nowrap;flex-shrink:0;">💬 Book Now</a>
+    <button class="belm" onClick="{{ toggleMenu }}" style="display:none;width:38px;height:38px;border-radius:4px;border:1px solid var(--bd);background:var(--bg-2);color:var(--tx-1);cursor:pointer;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">{{ menuIcon }}</button>
+  </div>
+</nav>
+
+<div onClick="{{ closeMenu }}" style="{{ overlayStyle }}"></div>
+<div style="{{ drawerStyle }}">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--bd);">
+    <img src="uploads/WhatsApp_Image_2026-06-23_at_09.54.25-removebg-preview.png" alt="Belpatra" style="height:52px;width:auto;">
+    <button onClick="{{ toggleMenu }}" style="border:none;background:none;color:var(--tx-m);font-size:22px;cursor:pointer;padding:4px;">✕</button>
+  </div>
+  <div style="display:flex;flex-direction:column;flex:1;">
+    <a href="Belpatra Home.dc.html" style="color:var(--tx-1);font-family:'Cormorant Garamond',serif;font-size:21px;padding:11px 0;border-bottom:1px solid var(--bd);">Home</a>
+    <a href="Belpatra About.dc.html" style="color:var(--tx-1);font-family:'Cormorant Garamond',serif;font-size:21px;padding:11px 0;border-bottom:1px solid var(--bd);">About Us</a>
+    <a href="Belpatra Rooms.dc.html" style="color:var(--tx-1);font-family:'Cormorant Garamond',serif;font-size:21px;padding:11px 0;border-bottom:1px solid var(--bd);">Rooms &amp; Stay</a>
+    <a href="Belpatra Restaurant.dc.html" style="color:var(--tx-1);font-family:'Cormorant Garamond',serif;font-size:21px;padding:11px 0;border-bottom:1px solid var(--bd);">Restaurant</a>
+    <a href="Belpatra Heritage.dc.html" style="color:var(--tx-1);font-family:'Cormorant Garamond',serif;font-size:21px;padding:11px 0;border-bottom:1px solid var(--bd);">Orchha Heritage</a>
+    <a href="Belpatra Gallery.dc.html" style="color:var(--tx-1);font-family:'Cormorant Garamond',serif;font-size:21px;padding:11px 0;border-bottom:1px solid var(--bd);">Gallery</a>
+    <a href="Belpatra Blog.dc.html" style="color:var(--tx-1);font-family:'Cormorant Garamond',serif;font-size:21px;padding:11px 0;border-bottom:1px solid var(--bd);">Blog</a>
+    <a href="Belpatra Contact.dc.html" style="color:var(--tx-1);font-family:'Cormorant Garamond',serif;font-size:21px;padding:11px 0;border-bottom:1px solid var(--bd);">Contact</a>
+    <a href="Belpatra Testimonials.dc.html" style="color:var(--tx-1);font-family:'Cormorant Garamond',serif;font-size:21px;padding:11px 0;border-bottom:1px solid var(--bd);">Guest Reviews</a>
+    <a href="Belpatra Attractions.dc.html" style="color:var(--tx-1);font-family:'Cormorant Garamond',serif;font-size:21px;padding:11px 0;">Nearby Attractions</a>
+  </div>
+  <div style="padding-top:24px;display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--bd);margin-top:20px;">
+    <a href="https://wa.me/918400598882?text=Hello%2C%20I%20would%20like%20to%20make%20a%20booking%20at%20Belpatra%2C%20Orchha" target="_blank" style="background:var(--gd);color:#1a1000;padding:13px;border-radius:4px;text-align:center;font-weight:700;font-size:14px;display:block;">💬 Book via WhatsApp</a>
+    <button onClick="{{ toggleTheme }}" style="background:var(--bg-3);border:1px solid var(--bd);color:var(--tx-1);padding:11px;border-radius:4px;cursor:pointer;font-size:13px;">{{ themeToggleLabel }}</button>
+  </div>
+</div>
+
+<a href="https://wa.me/918400598882" target="_blank" title="Book via WhatsApp" style="position:fixed;bottom:28px;right:28px;z-index:1001;width:56px;height:56px;border-radius:50%;background:#25d366;color:white;display:flex;align-items:center;justify-content:center;font-size:26px;animation:waPulse 2.5s ease-in-out infinite;">💬</a>
+
+<div style="height:71px;"></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { menuOpen: false, theme: 'dark' };
+
+  componentDidMount() {
+    const t = localStorage.getItem('belpatraTheme') || 'dark';
+    this.setState({ theme: t });
+    // Hide the loading stub now that real nav is mounted
+    const stub = document.getElementById('_navstub');
+    if (stub) stub.style.display = 'none';
+
+    const prog = document.getElementById('belProgress');
+    const nav = document.getElementById('belNav');
+    let last = 0;
+
+    window.addEventListener('scroll', () => {
+      const sy = window.scrollY;
+      if (prog) {
+        const sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        if (sh > 0) prog.style.width = (sy / sh * 100) + '%';
+      }
+      if (nav) {
+        nav.classList.toggle('scrolled', sy > 50);
+        if (sy > 180) {
+          nav.classList.toggle('hidden', sy > last + 6);
+          if (sy < last - 6) nav.classList.remove('hidden');
+        } else { nav.classList.remove('hidden'); }
+      }
+      last = sy <= 0 ? 0 : sy;
+    }, { passive: true });
+
+    // Active nav link highlight
+    const path = (window.location.pathname.split('/').pop() || '').split('?')[0];
+    if (path) document.querySelectorAll('.bnl').forEach(a => {
+      if ((a.getAttribute('href') || '').split('/').pop().split('?')[0] === path) a.classList.add('active');
+    });
+
+    // Defer scroll reveal + counters to idle
+    const idle = window.requestIdleCallback || (fn => setTimeout(fn, 80));
+    idle(() => {
+      const rObs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; rObs.unobserve(e.target); }});
+      }, { threshold: 0.08 });
+      document.querySelectorAll('[data-reveal]').forEach(el => {
+        el.style.opacity='0'; el.style.transform='translateY(26px)';
+        el.style.transition='opacity 0.7s ease, transform 0.7s ease';
+        rObs.observe(el);
+      });
+
+      const cObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          const el = e.target, target = parseFloat(el.getAttribute('data-counter'));
+          const dec = parseInt(el.getAttribute('data-counter-decimals')||'0');
+          const sfx = el.getAttribute('data-counter-suffix')||'', pfx = el.getAttribute('data-counter-prefix')||'';
+          let t0=null;
+          const step = ts => { if(!t0) t0=ts; const p=Math.min((ts-t0)/1800,1); const v=(1-Math.pow(1-p,3))*target; el.textContent=pfx+(dec?v.toFixed(dec):Math.round(v).toLocaleString('en-IN'))+sfx; if(p<1) requestAnimationFrame(step); };
+          requestAnimationFrame(step); cObs.unobserve(el);
+        });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('[data-counter]').forEach(el => cObs.observe(el));
+    });
+  }
+
+  toggleTheme() {
+    const next = this.state.theme === 'dark' ? 'light' : 'dark';
+    this.setState({ theme: next });
+    localStorage.setItem('belpatraTheme', next);
+    document.documentElement.setAttribute('data-theme', next);
+  }
+  toggleMenu() { this.setState(s => ({ menuOpen: !s.menuOpen })); }
+  closeMenu() { this.setState({ menuOpen: false }); }
+
+  renderVals() {
+    const { menuOpen, theme } = this.state;
+    return {
+      themeIcon: theme === 'dark' ? '☀️' : '🌙',
+      menuIcon: menuOpen ? '✕' : '☰',
+      themeToggleLabel: theme === 'dark' ? '☀ Light Mode' : '🌙 Dark Mode',
+      toggleTheme: () => this.toggleTheme(),
+      toggleMenu: () => this.toggleMenu(),
+      closeMenu: () => this.closeMenu(),
+      drawerStyle: { position:'fixed',top:0,right:0,bottom:0,zIndex:1006,width:'290px',background:'var(--bg-2)',padding:'24px 24px 28px',transform:menuOpen?'translateX(0)':'translateX(100%)',transition:'transform 0.32s cubic-bezier(0.4,0,0.2,1)',overflowY:'auto',display:'flex',flexDirection:'column',boxShadow:'-8px 0 36px var(--sh)' },
+      overlayStyle: { position:'fixed',inset:0,zIndex:1005,background:'rgba(0,0,0,0.6)',opacity:menuOpen?1:0,pointerEvents:menuOpen?'all':'none',transition:'opacity 0.3s ease',cursor:'pointer' }
+    };
+  }
+}
+</script>
+</body>
+</html>

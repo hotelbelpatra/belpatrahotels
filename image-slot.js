@@ -396,7 +396,15 @@
       // re-seeds _view from stored before clamp/apply, so a shrink→grow
       // cycle round-trips instead of ratcheting x/y toward the narrower
       // frame's clamp range.
-      this._ro = new ResizeObserver(() => this._render());
+      this._cachedW = 0;
+      this._cachedH = 0;
+      this._ro = new ResizeObserver((entries) => {
+        for (const e of entries) {
+          this._cachedW = e.contentRect.width;
+          this._cachedH = e.contentRect.height;
+        }
+        this._render();
+      });
       this._ro.observe(this);
       load();
       this._render();
@@ -477,7 +485,7 @@
       // resumes — bump + capture a generation so stale encodes bail.
       const gen = ++this._gen;
       try {
-        const w = this.clientWidth || this.offsetWidth || MAX_DIM;
+        const w = this._cachedW || this.clientWidth || this.offsetWidth || MAX_DIM;
         const url = await toDataUrl(file, w);
         if (gen !== this._gen) return;
         // Only exit reframe once the new image is in hand — a rejected type
@@ -519,7 +527,7 @@
     // stored pan toward zero.
     _geom() {
       const iw = this._img.naturalWidth, ih = this._img.naturalHeight;
-      const fw = this.clientWidth, fh = this.clientHeight;
+      const fw = this._cachedW || this.clientWidth, fh = this._cachedH || this.clientHeight;
       if (!iw || !ih || !fw || !fh) return null;
       return { iw, ih, fw, fh, base: Math.max(fw / iw, fh / ih) };
     }

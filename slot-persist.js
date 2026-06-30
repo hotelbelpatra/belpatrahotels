@@ -83,13 +83,7 @@
       .then(function (r) { return r.ok ? r.json() : {}; })
       .catch(function () { return {}; })
       .then(function (d) {
-        if (d && Object.keys(d).length > 0) return d;
-        return new Promise(function (res) { setTimeout(res, 500); })
-          .then(function () {
-            return _nativeFetch(SIDECAR + '?_v2=' + Date.now())
-              .then(function (r) { return r.ok ? r.json() : {}; })
-              .catch(function () { return {}; });
-          });
+        return d || {};
       });
   }
 
